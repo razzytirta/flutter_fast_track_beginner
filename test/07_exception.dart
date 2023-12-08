@@ -4,6 +4,6 @@ void main() {
 
     print(age);
   } on FormatException catch (e) {
-    print('Data yang diinput harus angka');
+    print('Data yang diinput harus angka $e');
   }
 }
