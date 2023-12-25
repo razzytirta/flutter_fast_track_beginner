@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'widgets/kotak_warna.dart';
 
 void main() {
-  runApp(VisibleInvisibleWidget());
+  runApp(ExtractWidget());
 }
 
 class MyApp extends StatelessWidget {
@@ -553,6 +554,36 @@ class VisibleInvisibleWidget extends StatelessWidget {
               color: Colors.blue,
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class ExtractWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
+          centerTitle: true,
+          title: Text("Extract Widget"),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              KotakWarna(color: Colors.red, text: "HELO"),
+              KotakWarna(color: Colors.yellow, text: "HELO"),
+              KotakWarna(color: Colors.blue, text: "HELO"),
+              KotakWarna(color: Colors.green, text: "HELO"),
+              KotakWarna(color: Colors.brown, text: "HELO"),
+              KotakWarna(color: Colors.purple, text: "HELO"),
+              KotakWarna(color: Colors.orange, text: "HELO"),
+              KotakWarna(color: Colors.blueAccent, text: "HELO"),
+            ],
+          ),
         ),
       ),
     );
